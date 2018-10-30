@@ -1,0 +1,2417 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontology.com.br/tno/spec/"
+     xml:base="http://ontology.com.br/tno/spec/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ontology.com.br/tno/spec/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Input_Card"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf1 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf1">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf1"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#TF_Card_Element"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf10 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf10">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Input"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf10"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf11 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf11">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Output"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf11"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf12 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf12">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf12"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Transport_Function"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf13 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf13">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf13"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Output"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Transport_Function"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf14 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf14">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf14"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf15 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf15">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf15"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf16 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf16">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf16"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf17 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf17">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf17"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf2 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf2">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf2"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf3 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf3">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf3"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf4 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf4">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf4"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Subslot"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf5 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf5">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf5"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf6 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf6">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf6"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf7 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf7">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf7"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf8 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf8">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf8"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#ComponentOf9 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#ComponentOf9">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf9"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Input_Card"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf1 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf1">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf1"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#TF_Card_Element"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf10 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf10">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Input"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf10"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf11 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf11">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Output"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf11"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf12 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf12">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf12"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Transport_Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf13 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf13">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf13"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Output"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Transport_Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf14 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf14">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf14"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf15 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf15">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf15"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf16 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf16">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf16"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf17 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf17">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf17"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf2 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf2">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf2"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf3 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf3">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf3"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf4 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf4">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf4"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Subslot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf5 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf5">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf5"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf6 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf6">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf6"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf7 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf7">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf7"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf8 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf8">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf8"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.ComponentOf9 -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.ComponentOf9">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf9"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.componentOf"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.binds -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.binds"/>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.binds.Adaptation_Function.Trail_Termination_Function -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.binds.Adaptation_Function.Trail_Termination_Function">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.binds.Input_Card.Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.binds.Input_Card.Input">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Input_Card"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.binds.Matrix.Adaptation_Function -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.binds.Matrix.Adaptation_Function">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.binds.Output_Card.Output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.binds.Output_Card.Output">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Output"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Adaptation_Function -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Adaptation_Function">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Matrix -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Matrix">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Physical_Media -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Physical_Media">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.componentOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.componentOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#links_input"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#links_output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.connects -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.connects"/>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.connects.AP.AP -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.connects.AP.AP">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#AP"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#AP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.connects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.connects.FEP.FEP -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.connects.FEP.FEP">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.connects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.connects.FP.FP -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.connects.FP.FP">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.connects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.connects.Reference_Point.Reference_Point -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.connects.Reference_Point.Reference_Point">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.connects"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.has_connects_supported -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.has_connects_supported">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.has_path -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.has_path">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.implements -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.implements"/>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.implements.Equipment.Technology -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.implements.Equipment.Technology">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Equipment"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.implements"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.implements.Layer.Service -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.implements.Layer.Service">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.implements"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.is_client -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.is_client">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_input">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_input.AP.Trail_Termination_Function_Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_input.AP.Trail_Termination_Function_Input">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#AP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_input.FEP.Adaptation_Function_Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_input.FEP.Adaptation_Function_Input">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Input"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_input.FEP.Matrix_Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_input.FEP.Matrix_Input">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_input.FEP.PM_Input_Sk -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_input.FEP.PM_Input_Sk">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_input.FEP.PM_Input_So -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_input.FEP.PM_Input_So">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_input.FP.Adaptation_Function_Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_input.FP.Adaptation_Function_Input">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Input"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_input.Reference_Point.Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_input.Reference_Point.Input">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_output">
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_output.AP.Adaptation_Function_Output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_output.AP.Adaptation_Function_Output">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#AP"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Output"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_output.FEP.Trail_Termination_Function_Output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_output.FEP.Trail_Termination_Function_Output">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_output.FP.Matrix_Output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_output.FP.Matrix_Output">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.links_output.Reference_Point.Output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.links_output.Reference_Point.Output">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Output"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.manages -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.manages">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Equipment"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.mc -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.mc">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#INV.supervises -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#INV.supervises">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#binds -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#binds">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#binds.Adaptation_Function.Trail_Termination_Function -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#binds.Adaptation_Function.Trail_Termination_Function">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Adaptation_Function.Trail_Termination_Function"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#binds"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#binds.Input_Card.Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#binds.Input_Card.Input">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Input_Card.Input"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Input_Card"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#binds"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#binds.Matrix.Adaptation_Function -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#binds.Matrix.Adaptation_Function">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Matrix.Adaptation_Function"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#binds"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#binds.Output_Card.Output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#binds.Output_Card.Output">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Output_Card.Output"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Output"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#binds"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#binds.Trail_Termination_Function.Adaptation_Function -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#binds.Trail_Termination_Function.Adaptation_Function">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Adaptation_Function"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#binds"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#binds.Trail_Termination_Function.Matrix -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#binds.Trail_Termination_Function.Matrix">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Matrix"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#binds"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#binds.Trail_Termination_Function.Physical_Media -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#binds.Trail_Termination_Function.Physical_Media">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Physical_Media"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#binds"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#componentOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#componentOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#links_input"/>
+        <owl:propertyDisjointWith rdf:resource="http://ontology.com.br/tno/spec/#links_output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#connects -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#connects">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.connects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#connects.AP.AP -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#connects.AP.AP">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#AP"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#AP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.connects.AP.AP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#connects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#connects.FEP.FEP -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#connects.FEP.FEP">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.connects.FEP.FEP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#connects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#connects.FP.FP -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#connects.FP.FP">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.connects.FP.FP"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#connects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#connects.Reference_Point.Reference_Point -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#connects.Reference_Point.Reference_Point">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.connects.Reference_Point.Reference_Point"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#connects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#has_connects_supported -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#has_connects_supported">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.has_connects_supported"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#has_path -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#has_path">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.has_path"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#implements -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#implements">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.implements"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#implements.Equipment.Technology -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#implements.Equipment.Technology">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Equipment"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.implements.Equipment.Technology"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#implements"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#implements.Layer.Service -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#implements.Layer.Service">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.implements.Layer.Service"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#implements"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#is_client -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#is_client">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.is_client"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_input">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_input.AP.Trail_Termination_Function_Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_input.AP.Trail_Termination_Function_Input">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#AP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.AP.Trail_Termination_Function_Input"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_input.FEP.Adaptation_Function_Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_input.FEP.Adaptation_Function_Input">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Input"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.FEP.Adaptation_Function_Input"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_input.FEP.Matrix_Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_input.FEP.Matrix_Input">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.FEP.Matrix_Input"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_input.FEP.PM_Input_Sk -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_input.FEP.PM_Input_Sk">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.FEP.PM_Input_Sk"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_input.FEP.PM_Input_So -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_input.FEP.PM_Input_So">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.FEP.PM_Input_So"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_input.FP.Adaptation_Function_Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_input.FP.Adaptation_Function_Input">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Input"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.FP.Adaptation_Function_Input"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_input.Reference_Point.Input -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_input.Reference_Point.Input">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.Reference_Point.Input"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_output">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_output.AP.Adaptation_Function_Output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_output.AP.Adaptation_Function_Output">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#AP"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Output"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output.AP.Adaptation_Function_Output"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_output.FEP.Trail_Termination_Function_Output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_output.FEP.Trail_Termination_Function_Output">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output.FEP.Trail_Termination_Function_Output"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_output.FP.Matrix_Output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_output.FP.Matrix_Output">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output.FP.Matrix_Output"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#links_output.Reference_Point.Output -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#links_output.Reference_Point.Output">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output.Reference_Point.Output"/>
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Output"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/tno/spec/#links_output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#manages -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#manages">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Equipment"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.manages"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#mc -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#mc">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.mc"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#supervises -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/tno/spec/#supervises">
+        <rdfs:range rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/tno/spec/#INV.supervises"/>
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Layer.name -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/tno/spec/#Layer.name">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Technology.name -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/tno/spec/#Technology.name">
+        <rdfs:domain rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#AP -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#AP">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_input.AP.Trail_Termination_Function_Input"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_output.AP.Adaptation_Function_Output"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Output"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Adaptation_Function -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Adaptation_Function">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf10"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Input"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf11"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Output"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Simple_Transport_Function"/>
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#TF_Card_Element"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Adaptation_Function"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#binds.Adaptation_Function.Trail_Termination_Function"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Equipment"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Input_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Adaptation_Function_Input -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Adaptation_Function_Input">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf10"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Input"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.FEP.Adaptation_Function_Input"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.FP.Adaptation_Function_Input"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Equipment"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Input_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Adaptation_Function_Output -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Adaptation_Function_Output">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf11"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Output"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output.AP.Adaptation_Function_Output"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#AP"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Equipment"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Input_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Card -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Card">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Equipment_Holder"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf4"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Subslot"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.supervises"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Equipment"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Input_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Equipment -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Equipment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.manages"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#implements.Equipment.Technology"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Input_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Equipment_Holder -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Equipment_Holder">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Card"/>
+                            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Rack"/>
+                            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Shelf"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#FEP -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#FEP">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_output.FEP.Trail_Termination_Function_Output"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Reference_Point"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_input.FEP.Adaptation_Function_Input"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Input"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_input.FEP.Matrix_Input"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_input.FEP.PM_Input_Sk"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_input.FEP.PM_Input_So"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#FP -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#FP">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_input.FP.Adaptation_Function_Input"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function_Input"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_output.FP.Matrix_Output"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Input -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Input">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf12"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Transport_Function"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.Reference_Point.Input"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Input_Card.Input"/>
+                <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Input_Card"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Input_Card -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Input_Card">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#binds.Input_Card.Input"/>
+                <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Layer -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Layer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf5"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf6"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.is_client"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#is_client"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#Layer.name"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Matrix -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Matrix">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf8"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf9"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#TF_Card_Element"/>
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Transport_Function"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Simple_Transport_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Matrix"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Matrix_Input -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Matrix_Input">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf9"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.FEP.Matrix_Input"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Matrix_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Matrix_Output -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Matrix_Output">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf8"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Matrix"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Output"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output.FP.Matrix_Output"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#FP"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Output -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Output">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf13"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Transport_Function"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Output_Card.Output"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Output_Card"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output.Reference_Point.Output"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Output_Card -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Output_Card">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf2"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#binds.Output_Card.Output"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Output"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#PM_Input_Sk -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#PM_Input_Sk">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf14"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.FEP.PM_Input_Sk"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#PM_Input_So -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#PM_Input_So">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf15"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.FEP.PM_Input_So"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Physical_Media"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Physical_Media -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Physical_Media">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf14"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_Sk"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf15"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#PM_Input_So"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Simple_Transport_Function"/>
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#TF_Card_Element"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Trail_Termination_Function.Physical_Media"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Rack -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Rack">
+        <rdfs:subClassOf rdf:resource="http://ontology.com.br/tno/spec/#Equipment_Holder"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Reference_Point"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Reference_Point -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Reference_Point">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_input.Reference_Point.Input"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Input"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#links_output.Reference_Point.Output"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Output"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Service"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#TF_Card_Element"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Transport_Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Service -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Service">
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Shelf"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Shelf -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Shelf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf7"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Rack"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.com.br/tno/spec/#Equipment_Holder"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Supervisor"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Simple_Transport_Function -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Simple_Transport_Function">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+                            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Physical_Media"/>
+                            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.com.br/tno/spec/#Transport_Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Subslot -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Subslot">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf4"/>
+                <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Supervisor -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Supervisor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#manages"/>
+                <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Equipment"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Technology"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#TF_Card_Element -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#TF_Card_Element">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf1"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Card"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Technology -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Technology">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf6"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.implements.Equipment.Technology"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.com.br/tno/spec/#Equipment"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#Technology.name"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Trail_Termination_Function -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Trail_Termination_Function">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf16"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#ComponentOf17"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf5"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Layer"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Simple_Transport_Function"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.binds.Adaptation_Function.Trail_Termination_Function"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input"/>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Input">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf17"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Input"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_input.AP.Trail_Termination_Function_Input"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#AP"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Trail_Termination_Function_Output">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.ComponentOf16"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Output"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/tno/spec/#INV.links_output.FEP.Trail_Termination_Function_Output"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/tno/spec/#FEP"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.com.br/tno/spec/#Transport_Function -->
+
+    <owl:Class rdf:about="http://ontology.com.br/tno/spec/#Transport_Function">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Matrix"/>
+                            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Simple_Transport_Function"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Adaptation_Function"/>
+            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Physical_Media"/>
+            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Trail_Termination_Function"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Card"/>
+            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Rack"/>
+            <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#Shelf"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://ontology.com.br/tno/spec/#z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+                        <swrl:argument1 rdf:resource="http://ontology.com.br/tno/spec/#x"/>
+                        <swrl:argument2 rdf:resource="http://ontology.com.br/tno/spec/#z"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+                                <swrl:argument1 rdf:resource="http://ontology.com.br/tno/spec/#y"/>
+                                <swrl:argument2 rdf:resource="http://ontology.com.br/tno/spec/#z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="http://ontology.com.br/tno/spec/#x"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.com.br/tno/spec/#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                        <swrl:argument1 rdf:resource="http://ontology.com.br/tno/spec/#y"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.com.br/tno/spec/#z"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                <swrl:argument2 rdf:resource="http://ontology.com.br/tno/spec/#x"/>
+                                                <swrl:argument1 rdf:resource="http://ontology.com.br/tno/spec/#y"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ontology.com.br/tno/spec/#componentOf"/>
+                        <swrl:argument1 rdf:resource="http://ontology.com.br/tno/spec/#x"/>
+                        <swrl:argument2 rdf:resource="http://ontology.com.br/tno/spec/#y"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.4) http://owlapi.sourceforge.net -->
+

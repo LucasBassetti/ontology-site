@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en" typeof="bibo:Document w3p:REC" about="" property="dcterms:language" content="en">
+<head>
+
+    <title>OntoUML Specification</title>
+
+    <meta name="keywords" content="UML, OntoUML, Ontology, Foundational Ontology">
+    <meta charset="UTF-8" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="OntoUML Specification" />
+    <meta property="og:description" content="OntoUML OntoUML is an ontologically well-founded UML extension based on the Unified Foundational Ontology (UFO). UFO was created by Giancarlo Guizzardi in his Ph.D. thesis and used to evaluate and re-design a fragment of the UML 2.0 metamodel. Giancarlo Guizzardi is a lead researcher at the Ontology &amp; Conceptual Modeling Research Group (NEMO) located at &hellip;" />
+    <meta property="og:url" content="http://ontology.com.br/ontouml/spec" />
+    <meta property="og:site_name" content="Ontology" />
+
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.theme.min.css"></link>
+    <link type="text/css" rel="stylesheet" href="css/style.css"></link>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-50372288-4', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</head>
+<body>
+
+    <a href="http://ontology.com.br">Ontology Project</a>
+    <a href="#" class="back-to-top">Back to Top</a>
+
+    <table class="title">
+        <tr>
+            <td>
+                 <h1>OntoUML Specification 1.0</h1>
+            </td>
+            <td class="logo">
+                <a href="http://nemo.inf.ufes.br"><img style="width:80px" src="img/logo_nemo.svg"/></a>
+            </td>
+        </tr>
+    </table>
+
+    <b>Last Change:</b>
+    <p>
+        <ul>
+            <li class="version">
+                September 1st, 2015
+            </li>
+        </ul>
+    </p>
+
+    <b>Editor:</b>
+    <p>
+        <ul>
+            <li class="editor">
+                <a href="https://www.linkedin.com/in/lucas-bassetti-67909836/">Lucas Bassetti R. da Fonseca</a>, <a href="http://nemo.inf.ufes.br">NEMO</a> 
+            </li>
+        </ul>
+    </p>
+
+    <hr/>
+
+    <h2>Table of Contents</h2>
+    <ul>
+        <li>1. <a href=#overview>Overview</a></li>
+        <li>2. <a href=#Substantial>Substantial</a>
+            <ul>
+                <li>2.1. <a href=#Sortal>Sortal</a>
+                    <ul>
+                        <li>2.1.1. <a href=#Kind>Kind</a></li>
+                        <li>2.1.2. <a href=#Subkind>Subkind</a></li>
+                        <li>2.1.3. <a href=#Role>Role</a></li>
+                        <li>2.1.4. <a href=#Phase>Phase</a></li>
+                        <li>2.1.5. <a href=#Collective>Collective</a></li>
+                        <li>2.1.6. <a href=#Quantity>Quantity</a></li>
+                    </ul>
+                </li>
+                <li>2.2. <a href=#Non-Sortal>Non Sortal</a>
+                    <ul>
+                        <li>2.2.1. <a href=#Category>Category</a></li>
+                        <li>2.2.2. <a href=#RoleMixin>RoleMixin</a></li>
+                        <li>2.2.3. <a href=#Mixin>Mixin</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>3. <a href=#Moment>Moment</a>
+            <ul>
+                <li>3.1. <a href=#Relator>Relator</a></li>
+                <li>3.2. <a href=#Mode>Mode</a></li>
+                <li>3.3. <a href=#Quality>Quality</a></li>
+            </ul>
+        </li>
+        <li>4. <a href=#relationships>Relationships</a>
+            <ul>
+                <li>4.1. <a href=#mediation>Mediation</a></li>
+                <li>4.2. <a href=#characterization>Characterization</a></li>
+                <li>4.3. <a href=#material>Material</a></li>
+                <li>4.4. <a href=#formal>Formal</a></li>
+                <li>4.5. <a href=#componentof>ComponentOf</a></li>
+                <li>4.6. <a href=#memberof>MemberOf</a></li>
+                <li>4.7. <a href=#subcollectionof>SubCollectionOf</a></li>
+                <li>4.8. <a href=#subquantityof>SubQuantityOf</a></li>
+                <li>4.9. <a href=#derivation>Derivation</a></li>
+            </ul>
+        </li>
+        <li>5. <a href=#specialization-table>Specialization Table</a></li>
+        <li>6. <a href=#relationship-table>Relationship Table</a></li>
+    </ul>
+
+
+    <h2>Introduction</h2>
+
+    <p>
+        OntoUML is an ontologically well-founded UML extension based on the Unified Foundational Ontology (UFO). UFO was created by Giancarlo Guizzardi in his <a href="http://www.inf.ufes.br/~gguizzardi/OFSCM.pdf" target="_blank">Ph.D. thesis</a> and used to evaluate and re-design a fragment of the UML 2.0 metamodel. Giancarlo Guizzardi is a lead researcher at the Ontology & Conceptual Modeling Research Group (NEMO) located at the Federal University of Espírito Santo (UFES) in Vitória, ES Brazil.
+    </p>
+
+    <h2 id="overview">1. Overview</h2>
+
+    <p>
+        <figure>
+            <a href="img/ontouml.jpg" target="_blank"><img src="img/ontouml.jpg"/></a>
+            <figcaption> OntoUML Metamodel </figcaption>
+        </figure>
+    </p>
+
+    <h2 id="Substantial">2. Substantial</h2>
+
+        <table id="prefix" class="prefix">
+            <tr>
+                <th>Prefix</th>
+                <th>Meta-Properties (MP)</th>
+            </tr>
+            <tr>
+                <td>+O</td>
+                <td>Provides identity (Own identity)</td>
+            </tr>
+            <tr>
+                <td>-O</td>
+                <td>Does not provides identity</td>
+            </tr>
+            <tr>
+                <td>+I</td>
+                <td>Identity</td>
+            </tr>
+            <tr>
+                <td>-I</td>
+                <td>No identity</td>
+            </tr>
+            <tr>
+                <td>+R</td>
+                <td>Rigid</td>
+            </tr>
+            <tr>
+                <td>-R</td>
+                <td>Anti-Rigid</td>
+            </tr>
+            <tr>
+                <td>~R</td>
+                <td>Semi-Rigid</td>
+            </tr>
+            <tr>
+                <td>+D</td>
+                <td>Dependent</td>
+            </tr>
+            <tr>
+                <td>-D</td>
+                <td>Independent</td>
+            </tr>
+        </table>
+
+        <h3 id="Sortal">2.1. Sortal</h3>
+
+            <h4 id="Kind">2.1.1. Kind</h4>
+
+                <table class="element">
+                    <tr>
+                        <th>
+                            Stereotype
+                        </th>
+                        <th>
+                            MP
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/kind.jpg"/>
+                        </td>
+                        <td class="mp">
+                            +O</br>
+                            +I</br>
+                            +R</br>
+                            -D
+                        </td>
+                        <td>
+                            A «kind» represents a substance sortal whose instances are functional
+                            complexes. Examples include instances of Natural Kinds (such as
+                            Person, Dog, Tree) and of artifacts (Chair, Car, Television).
+                        </td>
+
+                    </tr>
+                </table>
+
+                <div id="kind-accordion">
+                  <h3>Example</h3>
+                  <div>
+                    <img class="kind" src="img/examples/kind.png"/>
+                  </div>
+                </div>
+
+
+            <h4 id="Subkind">2.1.2. Subkind</h4>
+
+                <table class="element">
+                    <tr>
+                        <th>
+                            Stereotype
+                        </th>
+                        <th>
+                            MP
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/subkind.jpg"/>
+                        </td>
+                        <td class="mp">
+                            -O</br>
+                            +I</br>
+                            +R</br>
+                            -D
+                        </td>
+                        <td>
+                            A «subkind» is a rigid, relationally independent restriction of a substance sortal that carries the principle of identity supplied by it. An example could be the subkind MalePerson of the kind Person.
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="subkind-accordion">
+                  <h3>Example</h3>
+                  <div>
+                    <img class="subkind" src="img/examples/subkind.png"/>
+                  </div>
+                </div>
+
+            <h4 id="Role">2.1.3. Role</h4>
+
+                <table class="element">
+                    <tr>
+                        <th>
+                            Stereotype
+                        </th>
+                        <th>
+                            MP
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/role.jpg"/>
+                        </td>
+                        <td class="mp">
+                            -O</br>
+                            +I</br>
+                            -R</br>
+                            +D
+                        </td>
+                        <td>
+                            A «role» represents a phased-sortal role, i.e. anti-rigid and relationally dependent universal. For instance, the role student is played by an instance of the kind Person.
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="role-accordion">
+                  <h3>Example</h3>
+                  <div>
+                    <img class="role" src="img/examples/role.png"/>
+                  </div>
+                </div>
+
+            <h4 id="Phase">2.1.4. Phase</h4>
+
+                <table class="element">
+                    <tr>
+                        <th>
+                            Stereotype
+                        </th>
+                        <th>
+                            MP
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/phase.jpg"/>
+                        </td>
+                        <td class="mp">
+                            -O</br>
+                            +I</br>
+                            -R</br>
+                            -D
+                        </td>
+                        <td>
+                            A «phase» represents the phased-sortals phase, i.e. anti-rigid and relationally independent universals defined as part of a partition of a substance sortal. For instance, 〈Catterpillar, Butterfly〉 partitions the kind Lepdopterum.
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="phase-accordion">
+                  <h3>Example</h3>
+                  <div>
+                    <img class="phase" src="img/examples/phase.png"/>
+                  </div>
+                </div>
+
+
+            <h4 id="Collective">2.1.5. Collective</h4>
+
+                <table class="element">
+                    <tr>
+                        <th>
+                            Stereotype
+                        </th>
+                        <th>
+                            MP
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/collective.jpg"/>
+                        </td>
+                        <td class="mp">
+                            +O</br>
+                            +I</br>
+                            +R</br>
+                            -D
+                        </td>
+                        <td>
+                            A «collective» represents a substance sortal whose instances are collectives, i.e., they are collections of complexes that have a uniform structure. Examples include a deck of cards, a forest, a group of people, a pile of bricks. Collectives can typically relate to complexes via a constitution relation. For example, a pile of bricks that constitutes a wall, a group of people that constitutes a football team. In this case, the collectives typically have an extensional principle of identity, in contrast to the complexes they constitute. For instance, The Beatles was in a given world w constituted by the collective {John, Paul, George, Pete} and in another world w’ constituted by the collective {John, Paul, George, Ringo}. The replacement of Pete Best by Ringo Star does not alter the identity of the band, but creates a numerically different group of people.
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="collective-accordion">
+                  <h3>Example</h3>
+                  <div>
+                    <img class="collective" src="img/examples/collective.png"/>
+                  </div>
+                </div>
+
+            <h4 id="Quantity">2.1.6. Quantity</h4>
+
+                <table class="element">
+                    <tr>
+                        <th>
+                            Stereotype
+                        </th>
+                        <th>
+                            MP
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/quantity.jpg"/>
+                        </td>
+                        <td class="mp">
+                            +O</br>
+                            +I</br>
+                            +R</br>
+                            -D
+                        </td>
+                        <td>
+                            A «quantity» represents a substance sortal whose instances are quantities. Examples are those stuff universals that are typically referred in natural language by mass general terms (e.g., Gold, Water, Sand, Clay).
+                        </td>
+                    </tr>
+                </table>
+
+                 <div id="quantity-accordion">
+                  <h3>Example</h3>
+                  <div>
+                    <img class="quantity" src="img/examples/quantity.png"/>
+                  </div>
+                </div>
+
+        <h3 id="Non-Sortal">2.2. Non Sortal</h3>
+
+            <h4 id="Category">2.2.1. Category</h4>
+
+                <table class="element">
+                    <tr>
+                        <th>
+                            Stereotype
+                        </th>
+                        <th>
+                            MP
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/category.jpg"/>
+                        </td>
+                        <td class="mp">
+                            -O</br>
+                            -I</br>
+                            +R</br>
+                            -D
+                        </td>
+                        <td>
+                            A «category» represents a rigid and relationally independent mixin, i.e., a dispersive universal that aggregates essential properties which are common to different substance sortals. For example, the category RationalEntity as a generalization of Person and IntelligentAgent.
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="category-accordion">
+                  <h3>Example</h3>
+                  <div>
+                    <img class="category" src="img/examples/category.png"/>
+                  </div>
+                </div>
+
+            <h4 id="RoleMixin">2.2.2. RoleMixin</h4>
+
+                <table class="element">
+                    <tr>
+                        <th>
+                            Stereotype
+                        </th>
+                        <th>
+                            MP
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/rolemixin.jpg"/>
+                        </td>
+                        <td class="mp">
+                            -O</br>
+                            -I</br>
+                            -R</br>
+                            +D
+                        </td>
+                        <td>
+                            A «roleMixin» represents an anti-rigid and externally dependent non-sortal, i.e., a dispersive universal that aggregates properties which are common to different roles. In includes formal roles such as whole and part, and initiatior and responder.
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="roleMixin-accordion">
+                  <h3>Example</h3>
+                  <div>
+                    <img class="roleMixin" src="img/examples/roleMixin.png"/>
+                  </div>
+                </div>
+
+            <h4 id="Mixin">2.2.3. Mixin</h4>
+
+                <table class="element">
+                    <tr>
+                        <th>
+                            Stereotype
+                        </th>
+                        <th>
+                            MP
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/mixin.jpg"/>
+                        </td>
+                        <td class="mp">
+                            -O</br>
+                            -I</br>
+                            ~R</br>
+                            -D
+                        </td>
+                        <td>
+                            A «mixin» represents properties which are essential to some of its instances and accidental to others (semi-rigidity). An example is the mixin Seatable, which represents a property that can be considered essential to the kinds Chair and Stool, but accidental to Crate, Paper Box or Rock.
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="mixin-accordion">
+                  <h3>Example</h3>
+                  <div>
+                    <img class="mixin" src="img/examples/mixin.png"/>
+                  </div>
+                </div>
+
+    <h2 id="Moment">3. Moment</h2>
+
+        <h3 id="Relator">3.1. Relator</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Stereotype
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/relator.jpg"/>
+                    </td>
+                    <td>
+                        A «relator» universal is a relational moment universal. Every instance of relator universal is existentially dependent of at least two distinct entities. Relators are the instantiation of relational properties such as marriages, kisses, handshakes, commitments, and purchases.
+                    </td>
+                </tr>
+            </table>
+
+            <div id="relator-accordion">
+              <h3>Example</h3>
+              <div>
+                <img class="relator" src="img/examples/relator.png"/>
+              </div>
+            </div>
+
+
+        <h3 id="Mode">3.2. Mode</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Stereotype
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/mode.jpg"/>
+                    </td>
+                    <td>
+                        A «mode» universal is an intrinsic moment universal. Every instance of mode universal is existentially dependent of exactly one entity. Examples include skills, thoughts, beliefs, intentions, symptoms, private goals.
+                    </td>
+                </tr>
+            </table>
+
+            <div id="mode-accordion">
+              <h3>Example</h3>
+              <div>
+                <img class="mode" src="img/examples/mode.png"/>
+              </div>
+            </div>
+
+        <h3 id="Quality">3.3. Quality</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Stereotype
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/quality.jpg"/>
+                    </td>
+                    <td>
+                         A «quality» is defined as an individual (instance) with the power to connect the entity it qualifies (its subject) with a value in a geometric quality space.
+                    </td>
+                </tr>
+            </table>
+
+            <div id="quality-accordion">
+              <h3>Example</h3>
+              <div>
+                <img class="quality" src="img/examples/quality.png"/>
+              </div>
+            </div>
+
+    <h2 id="relationships">4. Relationships</h2>
+
+        <h3 id="mediation">4.1. Mediation</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Stereotype
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/mediation.jpg"/>
+                    </td>
+                    <td>
+                        A «mediation» is a formal relation that takes place between a relator universal and the endurant universal(s) it mediates. For example, the universal Marriage mediates the role universals Husband and Wife, the universal Enrollment mediates Student and University, and the universal Covalent Bond mediates the universal Atom.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b>Constraints</b>
+                    </td>
+                </tr>
+                <tr class="constraint">
+                    <td colspan="2">
+                        <ol>
+                            <li>
+                                An association stereotyped as «mediation» must have in its source association end a class stereotyped
+as «relator» representing the corresponding relator universal (self.source.oclIsTypeOf(Relator)=true);
+                            </li>
+                            <li>
+                                The association end connected to the mediated universal must have the minimum cardinality constraints of at least one (self.target.lower ≥ 1);
+                            </li>
+                            <li>
+                                The association end connected to the mediated universal must have the property (self.target.isreadOnly = true);
+                            </li>
+                            <li>
+                                The association end connected to the relator universal must have the minimum cardinality constraints of at least one (self.source.lower ≥ 1).
+                            </li>
+                            <li>
+                                «mediation» associations are always binary associations.
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+
+        <h3 id="characterization">4.2. Characterization</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Stereotype
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/characterization.jpg"/>
+                    </td>
+                    <td>
+                        A «characterization» is a formal relation that takes place between a mode universal and the endurant universal this mode universal characterizes. For example, the universals Private Goal and Capability characterize the universal Agent.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b>Constraints</b>
+                    </td>
+                </tr>
+                <tr class="constraint">
+                    <td colspan="2">
+                        <ol>
+                            <li>
+                                An association stereotyped as «characterization» must have in its source association end a class stereotyped as «mode» representing the characterizing mode universal (self.source.oclIsTypeOf(Mode)=true);
+                            </li>
+                            <li>
+                                The association end connected to the characterized universal must have the cardinality constraints of one and exactly one (self.target.lower = 1 and self.target.upper = 1);
+                            </li>
+                            <li>
+                                The association end connected to the characterizing quality universal (source association end) must have the minimum cardinality constraints of one (self.source.lower ≥ 1);
+                            </li>
+                            <li>
+                                The association end connected to the characterized universal must have the property (self.target.isreadOnly = true);
+                            </li>
+                            <li>
+                                «characterization» associations are always binary associations.
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+
+        <h3 id="material">4.3. Material</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Stereotype
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/material.jpg"/>
+                    </td>
+                    <td>
+                    A «material» association represents a material relation, i.e., a relational universal which is induced by a relator universal. Examples include student studies in university, patient is treated in medical unit, person is married to person.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b>Constraints</b>
+                    </td>
+                </tr>
+                <tr class="constraint">
+                    <td colspan="2">
+                        <ol>
+                            <li>
+                               Every «material» association must be connected to the association end of exactly one derivation relation;
+                            </li>
+                            <li>
+                                The cardinality constraints of the association ends of a material relation are derived from the cardinality constraints of the «mediation» relations of the relator universal that this material relation is derived from. This is done in the manner shown in this section. However, since «mediation» relations require a minimum cardinality of one on both of its association ends, then the minimum cardinality constraint on each end of the derived material relation must also be ≥ 1 ;
+                            </li>
+                            <li>
+                                Every «material» association must have the property (isDerived = true).
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+
+            </table>
+
+        <h3 id="formal">4.4. Formal</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Stereotype
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/formal.jpg"/>
+                    </td>
+                    <td>
+                        A «formal» association represents a formal relation, i.e., either a comparative relation (derived from intrinsic properties of the relating entities), or an internal relation. Examples include Person is older than Person, an Atom is heavier than another atom. We use UML symbolic representation for derived relations ( / ) to represent comparative relations.
+                    </td>
+                </tr>
+            </table>
+
+        <h3 id="componentof">4.5. ComponentOf</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Representation
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/componentof.jpg"/>
+                    </td>
+                    <td>
+                       ComponentOf is a parthood relation between two complexes. Examples include: (a) my hand is part of my arm; (b) a car engine is part of a car; (c) an Arithmetic and Logic Unit (ALU) is part of a Central Process Unit (CPU); (d) a heart is part of a circulatory system.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b>Constraints</b>
+                    </td>
+                </tr>
+                <tr class="constraint">
+                    <td colspan="2">
+                        <ol>
+                            <li>
+                                The classes connected to both association ends of this relation must represent universals whose instances are functional complexes. A universal X is a universal whose instances are functional complexes if it satisfies the following conditions: (i) If X is a sortal universal, then it must be either stereotyped as «kind» or be a subtype of a class stereotyped as «kind»; (ii) Otherwise, if X is a mixin universal, then for all classes Y such that Y is a subtype of X, we have that Y cannot be either stereotyped as «quantity» or «collective», and Y cannot be a subtype of class stereotyped as either «quantity» or «collective».
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+
+        <h3 id="memberof">4.6. MemberOf</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Representation
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/memberof.jpg"/>
+                    </td>
+                    <td>
+                       MemberOf is a parthood relation between a complex or a collective (as a part) and a collective (as a whole). Examples include: (a) a tree is part of forest; (b) a card is part of a deck of cards; (c) a fork is part of cutlery set; (d) a club member is part of a club.
+                    </td>
+                </tr>
+                <tr class="constraint">
+                    <td colspan="2">
+                        <ol>
+                            <li>
+                               This relation can only represent essential parthood (isEssential = true) if the object representing the whole on this relation is an extensional (isExtensional = true) individual. In this case, all parthood relations in which this individual participates as a whole are essential parthood relations;
+                            </li>
+                            <li>
+                                The classifier connected to association end relative to the whole individual must be a universal whose instances are collectives. The classifier connected to the association end relative to the part can be either a universal whose instances are collectives, or a universal whose instances are functional complexes.
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+
+        <h3 id="subcollectionof">4.7. SubCollectionOf</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Representation
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/subcollectionof.jpg"/>
+                    </td>
+                    <td>
+                       SubCollectionOf is a parthood relation between two collectives. Examples include: (a) the north part of the Black Forest is part of the Black Forest; (b) The collection of Jokers in a deck of cards is part of that deck of cards; (c) the collection of forks in cutlery set is part of that cutlery set; (d) the collection of male individuals in a crowd is part of that crowd.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b>Constraints</b>
+                    </td>
+                </tr>
+                <tr class="constraint">
+                    <td colspan="2">
+                        <ol>
+                            <li>
+                               The classes connected to both association ends of this relation must represent universals whose instances are collectives. A universal X is a universal whose instances are collectives if it satisfies the following conditions: (i) If X is a sortal universal, then it must be either stereotyped as «collective» or be a subtype of a class stereotyped as «collective»; (ii) Otherwise, if X is a mixin universal, then for all classes Y such that Y is a subtype of X, we have that Y cannot be either stereotyped as «kind» or «quantity», and Y cannot be a subtype of class stereotyped as either «kind» or «quantity»;
+                            </li>
+                            <li>
+                                The maximum cardinality constraint in the association end connected to the part must be one (self.target.upper = 1).
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+
+        <h3 id="subquantityof">4.8. SubQuantityOf</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Representation
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/subquantityof.jpg"/>
+                    </td>
+                    <td>
+                       SubQuantityOf is a parthood relation between two quantities. Examples include: (a) alcohol is part of Wine; (b) Plasma is part of Blood; (c) Sugar is part of Ice Cream; (d) Milk is part
+of Cappucino.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b>Constraints</b>
+                    </td>
+                </tr>
+                <tr class="constraint">
+                    <td colspan="2">
+                        <ol>
+                            <li>
+                               This relation is always non-shareable (isShareable = false);
+                            </li>
+                            <li>
+                                All entities stereotyped as «quantity» are extensional individuals and, thus, all parthood relations involving quantities are essential parthood relations;
+                            </li>
+                            <li>
+                                The maximum cardinality constraint in the association end connected to the part must be one (self.target.upper = 1).
+                            </li>
+                            <li>
+                                The classes connected to both association ends of this relation must represent universals whose instances are quantities. A universal X is a universal whose instances are quantities if it satisfies the following conditions: (i) If X is a sortal universal, then it must be either stereotyped as «quantity» or be a subtype of a class stereotyped as «quantity»; (ii) Otherwise, if X is a mixin universal, then for all classes Y such that Y is a subtype of X, we have that Y cannot be either stereotyped as «kind» or «collective», and Y cannot be a subtype of class stereotyped as either «kind» or «collective».
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+
+        <h3 id="derivation">4.9. Derivation</h3>
+
+            <table class="element">
+                <tr>
+                    <th>
+                        Representation
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/derivation.jpg"/>
+                    </td>
+                    <td>
+                       A derivation relation represents the formal relation of derivation that takes place between a material relation and the relator universal this material relation is derived from. Examples include the material relation married-to, which is derived from the relator universal Marriage, the material relation kissed-by, derived from the relator universal Kiss, and the material relation purchases-from, derived from the relator universal Purchase.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b>Constraints</b>
+                    </td>
+                </tr>
+                <tr class="constraint">
+                    <td colspan="2">
+                        <ol>
+                            <li>
+                                A derivation relation must have one of its association ends connected to a relator universal (the black circle end) and the other one connected to a material relation (self.target.oclIsTypeOf(Relator)=true, self.source.oclIsTypeOf(Material Association)=true);
+                            </li>
+                            <li>
+                                derivation associations are always binary associations;
+                            </li>
+                            <li>
+                                The black circle end of the derivation relation must have the cardinality constraints of one and exactly one (self.target.lower = 1 and self.target.upper = 1);
+                            </li>
+                            <li>
+                                The black circle end of the derivation relation must have the property (self.target.isreadOnly = true);
+                            </li>
+                            <li>
+                                The cardinality constraints of the association end connected to the material relation in a derivation relation are a product of the cardinality constraints of the «mediation» relations of the relator universal that this material relation derives from. This is done in the manner previously shown in this section. However, since «mediation» relations require a minimum cardinality of one on both of its association ends, then the minimum cardinality on the material relation end of a derivation relation must also be ≥ 1 (self.source.lower ≥ 1).
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+
+    <h2 id="specialization-table">5. Specialization Table</h2>
+
+        <table class="specialization">
+            <tr>
+                <td> (&#8595;) to (&#8594;) </td>
+                <td> Kind </td>
+                <td> Quantity </td>
+                <td> Collective </td>
+                <td> SubKind </td>
+                <td> Role </td>
+                <td> Phase </td>
+                <td> Category </td>
+                <td> Mixin </td>
+                <td> RoleMixin </td>
+                <td> Relator </td>
+                <td> Mode </td>
+                <td> Quality </td>
+            </tr>
+            <tr>
+                <td> Kind </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> Quantity </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> Collective </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> SubKind </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> Role </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> Phase </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> Category </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> Mixin </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> RoleMixin </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> Relator </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> Mode </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td> Quality </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td> - </td>
+                <td class="checked"> &#10003; </td>
+            </tr>
+        </table>
+
+        <h2 id="relationship-table">6. Relationship Table</h2>
+
+        <table class="specialization">
+            <tr>
+                <td> (&#8595;) to (&#8594;) </td>
+                <td> Kind </td>
+                <td> Quantity </td>
+                <td> Collective </td>
+                <td> SubKind </td>
+                <td> Role </td>
+                <td> Phase </td>
+                <td> Category </td>
+                <td> Mixin </td>
+                <td> RoleMixin </td>
+                <td> Relator </td>
+                <td> Mode </td>
+                <td> Quality </td>
+            </tr>
+            <tr>
+                <td> Kind </td>
+                <td> cfm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> dfm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+            <tr>
+                <td> Quantity </td>
+                <td> fm </td>
+                <td> fmq </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> dfm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+            <tr>
+                <td> Collective </td>
+                <td> bfm </td>
+                <td> fm </td>
+                <td> bfms </td>
+                <td> bfm </td>
+                <td> bcfm </td>
+                <td> bcfm </td>
+                <td> bcfm </td>
+                <td> bcfm </td>
+                <td> bcfm </td>
+                <td> dfm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+            <tr>
+                <td> SubKind </td>
+                <td> cfm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> dfm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+            <tr>
+                <td> Role </td>
+                <td> cfm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> dfm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+            <tr>
+                <td> Phase </td>
+                <td> cfm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> dfm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+            <tr>
+                <td> Category </td>
+                <td> cfm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> dfm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+            <tr>
+                <td> Mixin </td>
+                <td> cfm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> dfm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+            <tr>
+                <td> RoleMixin </td>
+                <td> cfm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> fm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> cfm </td>
+                <td> dfm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+            <tr>
+                <td> Relator </td>
+                <td> dfm </td>
+                <td> dfm </td>
+                <td> dfm </td>
+                <td> dfm </td>
+                <td> dfm </td>
+                <td> dfm </td>
+                <td> dfm </td>
+                <td> dfm </td>
+                <td> dfm </td>
+                <td> bcdfmqs </td>
+                <td> dfhm </td>
+                <td> dfhm </td>
+            </tr>
+            <tr>
+                <td> Mode </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> dfhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+            <tr>
+                <td> Quality </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+                <td> dfhm </td>
+                <td> fhm </td>
+                <td> fhm </td>
+            </tr>
+        </table>
+
+        <br/><br/>
+        <b>Relationships</b>
+
+        <table class="caption">
+            <tr>
+                <td>(m)aterial</td>
+                <td>me(d)iation</td>
+                <td>(c)omponentOf</td>
+                <td>sub(q)uantityOf</td>
+            </tr>
+            <tr>
+                <td>(f)ormal</td>
+                <td>c(h)aracterization</td>
+                <td>mem(b)erOf</td>
+                <td>(s)ubcollectionOf</td>
+            </tr>
+        </table>
+
+
+     <script>
+
+        $(window).load(function() {
+            var offset = 220;
+            var duration = 500;
+            jQuery(window).scroll(function() {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.back-to-top').fadeIn(duration);
+                } else {
+                    jQuery('.back-to-top').fadeOut(duration);
+                }
+            });
+
+            jQuery('.back-to-top').click(function(event) {
+                event.preventDefault();
+                jQuery('html, body').animate({scrollTop: 0}, duration);
+                return false;
+            })
+
+            $( "#kind-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            $( "#subkind-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            $( "#role-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            $( "#phase-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+            });
+
+            $( "#collective-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                autoHeight: false,
+            });
+
+            $( "#quantity-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            $( "#category-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            $( "#roleMixin-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            $( "#mixin-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            $( "#relator-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            $( "#mode-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            $( "#quality-accordion" ).accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+        });
+
+    </script>
+
+</body>
+</html>

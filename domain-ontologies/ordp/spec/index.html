@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt" about="" property="dcterms:language" content="pt">
+<head>
+
+    <title>Ontologia de Referência para Autorização e Execução da Despesa Orçamentária Federal Brasileira (ORDP)</title>
+
+    <meta name="keywords" content="UML, OntoUML, Ontologia, Ontologia de Domínio, ORDP">
+    <meta charset="UTF-8" />
+
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ontologia de Referência para Autorização e Execução da Despesa Orçamentária Federal Brasileira (ORDP)" />
+    <meta property="og:description" content="Ontologia de Referência para Autorização e Execução da Despesa Orçamentária Federal Brasileira (ORDP)" />
+    <meta property="og:url" content="http://ontology.com.br/ordp/spec" />
+    <meta property="og:site_name" content="Ontology" />
+
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.theme.min.css"></link>
+    <link type="text/css" rel="stylesheet" href="css/style.css"></link>
+
+</head>
+<body>
+
+    <a href="http://ontology.com.br">Ontology Project</a>
+    <a href="#" class="back-to-top">Back to Top</a>
+
+    <table class="title">
+        <tr>
+            <td>
+                <h1>Ontologia de Referência para Autorização e Execução da Despesa Orçamentária Federal Brasileira (ORDP)</h1>
+            </td>
+            <td class="logo">
+                <a href="http://nemo.inf.ufes.br"><img style="width:80px" src="img/logo_nemo.svg"/></a>
+            </td>
+        </tr>
+    </table>
+
+    <b>Ultima alteração:</b>
+    <p>
+        <ul>
+            <li class="version">
+                30 de Março de 2017
+            </li>
+        </ul>
+    </p>
+
+    <b>Autores:</b>
+    <p>
+        <ul>
+            <li class="autor">
+                <a href="https://www.linkedin.com/in/lucas-bassetti-67909836/" target="_blank">Lucas Bassetti R. da Fonseca</a>, <a href="http://nemo.inf.ufes.br">NEMO</a>
+            </li>
+            <li class="autor">
+                <a href="http://www.informatica.ufes.br/pos-graduacao/PPGI/detalhes-de-pessoal?id=9227" target="_blank">Archimedes A. Detoni</a>, <a href="http://nemo.inf.ufes.br">NEMO</a>
+            </li>
+            <li class="autor">
+                <a href="http://nemo.inf.ufes.br/jpalmeida/" target="_blank">João Paulo A. Almeida</a>, <a href="http://nemo.inf.ufes.br">NEMO</a>
+            </li>
+            <li class="autor">
+                <a href="http://www.inf.ufes.br/~falbo/" target="_blank">Ricardo de Almeida Falbo</a>, <a href="http://nemo.inf.ufes.br">NEMO</a>
+            </li>
+        </ul>
+    </p>
+
+    <b>Editor:</b>
+    <p>
+        <ul>
+            <li class="editor">
+                <a href="https://www.linkedin.com/in/lucas-bassetti-67909836/" target="_blank">Lucas Bassetti R. da Fonseca</a>, <a href="http://nemo.inf.ufes.br">NEMO</a>
+            </li>
+        </ul>
+    </p>
+
+    <b>Links:</b>
+    <p>
+        <ul>
+            <li class="github">
+                <a href="https://github.com/LucasBassetti/despesa-orcamentaria" target="_blank">Página no Github</a>
+            </li>
+        </ul>
+    </p>
+
+    <hr/>
+
+    <h2>Sumário</h2>
+    <ul>
+        <li>1. <a href=#overview>Visão Geral</a></li>
+        <li>2. <a href=#etapaAutorizacao>Autorização Orçamentária</a></li>
+        <li>3. <a href=#etapaEmpenho>Empenho</a></li>
+        <li>4. <a href=#etapaLiquidacao>Liquidação</a></li>
+        <li>5. <a href=#etapaPagamento>Pagamento</a></li>
+    </ul>
+
+
+    <h2>Introdução</h2>
+
+    <p>
+         A ontologia de referência para o domínio de execução da despesa orçamentária federal abrange desde a
+         programação estabelecida na LOA até o pagamento da despesa.
+    </p>
+
+    <h2 id="overview">1. Visão Geral</h2>
+
+    <p>
+        <figure>
+            <a href="img/visaoGeral.svg" target="_blank"><img src="img/visaoGeral.svg"/></a>
+            <figcaption> Visão geral do processo de autorização e execução da despesa orçamentária. </figcaption>
+        </figure>
+    </p>
+
+    <h2 id="etapaAutorizacao">2. Autorização Orçamentária</h2>
+
+    <p>
+        <figure>
+            <a href="img/loa.svg" target="_blank"><img src="img/loa.svg"/></a>
+            <figcaption> Fragmento da Ontologia de Autorização e Execução Orçamentária (Item da LOA). </figcaption>
+        </figure>
+    </p>
+
+    <h3 id="conceitos">Conceitos</h3>
+    <p>
+        <a href="#AutorizacaoDespesa">Autorização de Despesa</a> |
+        <a href="#CategoriaEconomica">Categoria Econômica</a> |
+        <a href="#EnteFederativo">Ente Federativo</a> |
+        <a href="#GrupoDespesa">Grupo da Despesa</a> |
+        <a href="#LeiOrcamentariaAnual">Lei Orçamentária Anual</a> |
+        <a href="#ModalidadeAplicacao">Modalidade da Aplicação</a> |
+        <a href="#Orcamento">Orçamento</a> |
+        <a href="#OrcamentoSeguridadeSocial">Orçamento da Seguridade Social</a> |
+        <a href="#OrcamentoInvestimento">Orçamento de Investimento</a> |
+        <a href="#OrcamentoFiscal">Orçamento Fiscal</a> |
+        <a href="#OutorganteGasto">Outorgante de Gasto</a> |
+        <a href="#UnidadeOrcamentaria">Unidade Orçamentária</a>
+    </p>
+
+    <!-- <h3 id="Uniao">União</h3>
+    <table class="element">
+        <tr> <th> Estereótipo </th> <th> Descrição </th> </tr>
+        <tr>
+            <td> <a href="http://ontology.com.br/ontouml/spec/#Kind" target="_blank"> «kind» </a> </td>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+
+    <h3 id="LeiOrcamentariaAnual">Lei Orçamentária Anual</h3>
+    <table class="element">
+        <tr> <th> Estereótipo </th> <th> Descrição </th> </tr>
+        <tr>
+            <td> <a href="http://ontology.com.br/ontouml/spec/#Relator" target="_blank"> «relator» </a> </td>
+            <td>
+
+            </td>
+        </tr>
+    </table> -->
+
+
+    <h2 id="etapaEmpenho">3. Empenho</h2>
+
+    <p>
+        <figure>
+            <a href="img/empenho.svg" target="_blank"><img src="img/empenho.svg"/></a>
+            <figcaption> Fragmento da Ontologia de Autorização e Execução Orçamentária (Empenho). </figcaption>
+        </figure>
+    </p>
+
+    <h3 id="conceitos">Conceitos</h3>
+    <p>
+        <a href="#AutorizacaoDespesa">Autorização de Despesa</a> |
+        <a href="#CategoriaEconomica">Categoria Econômica</a> |
+        <a href="#Credor">Credor</a> |
+        <a href="#ElementoDespesa">Elemento da Despesa</a> |
+        <a href="#Empenho">Empenho</a> |
+        <a href="#GrupoDespesa">Grupo da Despesa</a> |
+        <a href="#ItemEmpenho">Item de Empenho</a> |
+        <a href="#ItemEmpenhoMaterial">Item de Empenho de Material</a> |
+        <a href="#ItemEmpenhoTipoMaterial">Item de Empenho de Tipo de Material</a> |
+        <a href="#MaterialBem">Moterial (Bem)</a> |
+        <a href="#ModalidadeAplicacao">Modalidade da Aplicação</a> |
+        <a href="#SubelementoDespesa">Subelemento da Despesa</a>
+        <a href="#TipoMaterial">Tipo de Material</a> |
+        <a href="#UnidadeGestora">Unidade Gestora</a>
+    </p>
+
+    <div id="exemple-accordion">
+        <h3 style="padding:5px; cursor:pointer;">Exemplo de relação entre diferentes tipos</h3>
+        <div>
+            <img class="exemple" src="img/exemplo.svg"/>
+        </div>
+    </div>
+
+    <h2 id="etapaLiquidacao">4. Liquidação</h2>
+
+    <p>
+        <figure>
+            <a href="img/liquidacao.svg" target="_blank"><img src="img/liquidacao.svg"/></a>
+            <figcaption> Fragmento da Ontologia de Autorização e Execução Orçamentária (Liquidação). </figcaption>
+        </figure>
+    </p>
+
+    <h3 id="conceitos">Conceitos</h3>
+    <p>
+        <a href="#Credor">Credor</a> |
+        <a href="#ElementoDespesa">Elemento da Despesa</a> |
+        <a href="#Empenho">Empenho</a> |
+        <a href="#ItemEmpenho">Item de Empenho</a> |
+        <a href="#ItemEmpenhoMaterial">Item de Empenho de Material</a> |
+        <a href="#ItemEmpenhoTipoMaterial">Item de Empenho de Tipo de Material</a> |
+        <a href="#ItemLiquidacao">Item de Liquidação</a> |
+        <a href="#ItemLiquidacaoMaterial">Item de Liquidação de Material</a> |
+        <a href="#Liquidacao">Liquidação</a> |
+        <a href="#MaterialBem">Moterial (Bem)</a> |
+        <a href="#MaterialLiquidado">Moterial Liquidado</a> |
+        <a href="#ModalidadeAplicacao">Modalidade da Aplicação</a> |
+        <a href="#SubelementoDespesa">Subelemento da Despesa</a>
+        <a href="#TipoMaterial">Tipo de Material</a> |
+        <a href="#UnidadeGestora">Unidade Gestora</a>
+    </p>
+
+    <h2 id="etapaPagamento">5. Pagamento</h2>
+
+    <p>
+        <figure>
+            <a href="img/pagamento.svg" target="_blank"><img src="img/pagamento.svg"/></a>
+            <figcaption> Fragmento da Ontologia de Autorização e Execução Orçamentária (Pagamento). </figcaption>
+        </figure>
+    </p>
+
+    <h3 id="conceitos">Conceitos</h3>
+    <p>
+        <a href="#Credor">Credor</a> |
+        <a href="#ElementoDespesa">Elemento da Despesa</a> |
+        <a href="#Empenho">Empenho</a> |
+        <a href="#ItemEmpenho">Item de Empenho</a> |
+        <a href="#ItemEmpenhoMaterial">Item de Empenho de Material</a> |
+        <a href="#ItemEmpenhoTipoMaterial">Item de Empenho de Tipo de Material</a> |
+        <a href="#ItemLiquidacao">Item de Liquidação</a> |
+        <a href="#ItemLiquidacaoMaterial">Item de Liquidação de Material</a> |
+        <a href="#ItemPagamento">Item de Pagamento</a> |
+        <a href="#ItemPagamentoMaterial">Item de Pagamento de Material</a> |
+        <a href="#Liquidacao">Liquidação</a> |
+        <a href="#MaterialBem">Moterial (Bem)</a> |
+        <a href="#MaterialLiquidado">Moterial Liquidado</a> |
+        <a href="#MaterialPago">Moterial prescreveCategoriaEconomica</a> |
+        <a href="#ModalidadeAplicacao">Modalidade da Aplicação</a> |
+        <a href="#Pagamento">Pagamento</a> |
+        <a href="#SubelementoDespesa">Subelemento da Despesa</a>
+        <a href="#TipoMaterial">Tipo de Material</a> |
+        <a href="#UnidadeGestora">Unidade Gestora</a>
+    </p>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <script>
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-50372288-4', 'auto');
+    ga('send', 'pageview');
+
+    $(window).load(function() {
+        var offset = 220;
+        var duration = 500;
+        jQuery(window).scroll(function() {
+            if (jQuery(this).scrollTop() > offset) {
+                jQuery('.back-to-top').fadeIn(duration);
+            } else {
+                jQuery('.back-to-top').fadeOut(duration);
+            }
+        });
+
+        jQuery('.back-to-top').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+
+        jQuery('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
+                    return false;
+                }
+            }
+        });
+
+        $( "#exemple-accordion" ).accordion({
+            collapsible: true,
+            active: false,
+            heightStyle: "content"
+        });
+
+    });
+
+    </script>
+
+</body>
+</html>
